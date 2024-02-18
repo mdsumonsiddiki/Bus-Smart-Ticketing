@@ -8,18 +8,18 @@ for (const seat of allSeats) {
 
         // incrementSeat
         let incrementSeat = getInnerText('increment-seat');
-        incrementSeat ++;
+        incrementSeat++;
         setInnerTextById('increment-seat', incrementSeat);
         // decrementSeat
         let decrementSeat = getInnerText('decrement -seat');
-        decrementSeat --;
+        decrementSeat--;
         setInnerTextById('decrement -seat', decrementSeat);
-        
+
         const seatName = e.target.innerText;
 
         const checkOut = document.getElementById('check-out');
         const ticketPrice = getInnerText('ticket-price');
-        
+
         const li = document.createElement("li");
         const h1 = document.createElement("h1");
         h1.innerText = seatName;
@@ -36,11 +36,40 @@ for (const seat of allSeats) {
         totalPrice = totalPrice + ticketPrice;
         setInnerTextById('total-price', totalPrice);
         setInnerTextById('grand-price', totalPrice);
-        
-        const seatBook = getInnerText('increment-seat')
-        if(seatBook === 4){
-            
+
+        const seatBook = getInnerText('increment-seat');
+        if (seatBook === 4) {
+            removeClassById('cuppon-feild', 'pointer-events-none')
+            removeClassById('cuppon-btn', 'bg-gray-400')
+            addClassById('cuppon-btn', 'bg-[#1DD100]')
+
+            const applyBtn = document.getElementById('cuppon-btn');
+            applyBtn.addEventListener('click', function (e) {
+                const cupponCodeOne = getInnerTextSting('new15')
+                const cupponCodeTwo = getInnerTextSting('couple-offer')
+                const offerInputValue = document.getElementById('offer-input').value;
+
+                if (cupponCodeOne === offerInputValue) {
+                    const discountPrice = totalPrice * 0.15;
+                    const totalDiscount = totalPrice - discountPrice;
+                    removeClassById('discount', 'hidden')
+                    addClassById('discount', 'flex')
+                    setInnerTextById('Discount-price', discountPrice)
+                    setInnerTextById('grand-price', totalDiscount);
+                    addClassById('coupon-area', 'hidden')
+                }
+                else if(cupponCodeTwo === offerInputValue) {
+                    const discountPriceTwo = totalPrice * 0.20;
+                    const totalDiscountTwo = totalPrice - discountPriceTwo;
+                    removeClassById('discount', 'hidden')
+                    addClassById('discount', 'flex')
+                    setInnerTextById('Discount-price', discountPriceTwo)
+                    setInnerTextById('grand-price', totalDiscountTwo);
+                    addClassById('coupon-area', 'hidden')
+                }
+            })
         }
+
     })
 }
 

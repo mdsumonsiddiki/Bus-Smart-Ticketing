@@ -117,7 +117,7 @@
                         <p class="font-medium text-[#030712CC80]">use by January 2024</p>
                     </div>
                     <div class="space-y-2">
-                        <h2 class="text-[#030712] font-bold text-3xl relway">NEW15</h2>
+                        <h2 id="new15" class="text-[#030712] font-bold text-3xl relway">NEW15</h2>
                         <p class="text-[#030712CC66] font-medium text-xl">Coupon Code</p>
                     </div>
                     <div class="divider"></div>
@@ -129,7 +129,7 @@
                         <p class="font-medium text-[#030712CC80]">use by January 2024</p>
                     </div>
                     <div class="space-y-2">
-                        <h2 class="text-[#030712] font-bold text-3xl relway">Couple 20</h2>
+                        <h2 id="couple-offer" class="text-[#030712] font-bold text-3xl relway">Couple 20</h2>
                         <p class="text-[#030712CC66] font-medium text-xl">Coupon Code</p>
                     </div>
                     <div class="divider"></div>
@@ -196,7 +196,7 @@
 
                 </div>
                 <!-- seat area -->
-                <div class="p-14 bg-white rounded-3xl mt-6 flex justify-between items-start relative">
+                <div class="p-14 bg-white rounded-3xl mt-6 flex justify-between items-start">
                     <div class="left">
                         <div class="top">
                             <h2 class="text-[#030712] font-semibold text-2xl pb-6 border-b-2 border-dashed">Select Your
@@ -315,10 +315,14 @@
                                     <h2 class="text-[#030712] font-bold">Total Price</h2>
                                     <h2 class="text-[#030712] font-bold">BDT <span id="total-price">0</span></h2>
                                 </div>
-                                <div class="pt-6">
+                                <div id="discount" class="border-b-2 pt-6 pb-3 items-center justify-between hidden">
+                                    <h2 class="text-[#030712] font-bold">Discount Price</h2>
+                                    <h2 class="text-[#030712] font-bold">BDT <span id="Discount-price">0</span></h2>
+                                </div>
+                                <div id="coupon-area" class="pt-6">
                                     <label id="cuppon-feild" class="input pointer-events-none input-bordered flex items-center gap-2 py-7">
-                                        <input type="text" class="grow" placeholder="Have any copupon?" />
-                                        <button class="badge bg-gray-400 border-none text-white btns">Apply</button>
+                                        <input id="offer-input" type="text" class="grow" placeholder="Have any copupon?" />
+                                        <button id="cuppon-btn" class="badge bg-gray-400 border-none text-white btns">Apply</button>
                                     </label>
                                 </div>
                                 <div class=" pt-6 flex items-center justify-between">
@@ -352,7 +356,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="seat-devider"></div>
                 </div>
             </div>
         </section>

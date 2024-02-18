@@ -6,3 +6,59 @@
 .relway{
     font-family: "Raleway", sans-serif;
 }
+.divider{
+    position: absolute;
+    border-left: 2px dashed #fff;
+    height: 100%;
+    left: 60%;
+    top: 50%;
+    transform: translateY(-55%);
+}
+.dividerr{
+    position: absolute;
+    border-left: 2px dashed #1DD100;
+    height: 100%;
+    right: -6%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.btns{
+    padding: 21px 30px;
+    border: 2px solid #1DD100;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Raleway", sans-serif;
+    color: #1DD100;
+}
+.seats{
+    width: 110px;
+    height: 56px;
+    background: #03071220;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #030712;
+    font-size: 18px;
+    font-weight: 500;
+}
+.seat-devider{
+    position: absolute;
+    border-left: 2px dashed #0307124D;
+    height: 100%;
+    left: 57%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.serial{
+    width: 110px;
+    height: 56px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #030712;
+    font-size: 18px;
+    font-weight: 500;
+}

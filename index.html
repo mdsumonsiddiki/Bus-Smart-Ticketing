@@ -61,9 +61,7 @@
                 <div class="banner-content text-center">
                     <h1 class="text-6xl relway font-extrabold text-white">End-to-End Travel with <span
                             class="block text-[#1DD100] pt-3">S Paribahan</span></h1>
-                    <p class="text-white w-8/12 mx-auto pt-4 mb-14">Yes, you can run unit tests and view the results
-                        directly
-                        within the app. The integrated testing features allow for a streamlined .</p>
+                    <p class="text-white w-8/12 mx-auto pt-4 mb-14">S-Ticket is premium online booking portal which allows you to purchase ticket for various bus services, launch services, movies and events across the country</p>
                     <a href="#seat-section"
                         class="btns text-white px-7 text-[#030712] relway font-bold text-xl bg-[#1DD100] border-none hover:bg-[#1DD100]">Buy
                         Tickets</a>
@@ -142,12 +140,11 @@
         </section>
 
         <!-- poribahan section -->
-        <section id="seat-section" class="bg-[#F7F8F8] rounded-t-[88px] py-32 border-t-4 border-[#1DD100]">
+        <section id="seat-section" class="bg-[#F7F8F8] rounded-t-[88px] py-32 border-t-4 border-[#1DD100] relative">
             <div class="container mx-auto">
                 <div class="section-title text-center mb-12">
                     <h4 class="text-4xl relway font-bold text-[#030712]">S.S Paribahan</h4>
-                    <p class="w-7/12 mx-auto pt-4 mb-14">Yes, you can run unit tests and view the results directly
-                        within the app. The integrated testing features allow for a streamlined .</p>
+                    <p class="w-7/12 mx-auto pt-4 mb-14">Whether you are travelling for work or leisure, book your tickets through us and keep all your worries away.</p>
                 </div>
                 <div class=" bg-white p-8 rounded-3xl grid grid-cols-4 items-center">
                     <div class="col-span-3 relative">
@@ -297,7 +294,7 @@
                     <div class="right">
                         <h2 class="text-[#030712] font-semibold text-2xl pb-6 border-b-2 border-dashed">Select Your Seat
                         </h2>
-                        <div class="bg-[#F7F8F8] p-8 rounded-xl mt-6">
+                        <div class="bg-[#F7F8F8] p-12 rounded-xl mt-6">
                             <div class=" flex items-center justify-between gap-16 pb-6 border-b-2 border-dashed">
                                 <h2 class="text-[#030712] font-medium">Seat<span id="increment-seat"
                                         class="px-2 py-1 bg-[#1DD100] text-white rounded-[5px] text-xs ml-2">0</span>
@@ -320,10 +317,16 @@
                                     <h2 class="text-[#030712] font-bold">BDT <span id="Discount-price">0</span></h2>
                                 </div>
                                 <div id="coupon-area" class="pt-6">
-                                    <label id="cuppon-feild" class="input pointer-events-none input-bordered flex items-center gap-2 py-7">
-                                        <input id="offer-input" type="text" class="grow" placeholder="Have any copupon?" />
-                                        <button id="cuppon-btn" class="badge bg-gray-400 border-none text-white btns">Apply</button>
+                                    <label id="cuppon-feild"
+                                        class="input pointer-events-none input-bordered flex items-center gap-2 py-7">
+                                        <input id="offer-input" type="text" class="grow"
+                                            placeholder="Have any copupon?" />
+                                        <button id="cuppon-btn"
+                                            class="badge bg-gray-400 border-none text-white btns">Apply</button>
+
                                     </label>
+                                    <h2 id="coupon-warning" class=" hidden text-red-700 font-medium text-lg pt-2">Please
+                                        Enter Valid Coupon Code</h2>
                                 </div>
                                 <div class=" pt-6 flex items-center justify-between">
                                     <h2 class="text-[#030712] font-bold">Grand Total</h2>
@@ -339,8 +342,11 @@
                             </div>
                             <div class="pt-6">
                                 <h2 class="text-[#030712] font-semibold text-xl pb-6">Phone Number*</h2>
-                                <input type="number" required placeholder="Enter your phone number"
+                                <input id="number-input" type="text" required placeholder="Enter your phone number"
                                     class="input input-bordered w-full py-8" />
+
+                                <h2 id="input-warning" class="hidden text-red-700 font-medium text-xl">Please Enter Your
+                                    Number*</h2>
                             </div>
                             <div class="pt-6">
                                 <h2 class="text-[#030712] font-semibold text-xl pb-6">Email ID</h2>
@@ -348,7 +354,8 @@
                                     class="input input-bordered w-full py-8" />
                             </div>
                             <div class="pt-6">
-                                <button class="btns w-full bg-[#1DD100] text-white font-extrabold">Next</button>
+                                <button id="submit-btn"
+                                    class="btns bg-gray-400 w-full pointer-events-none border-none text-white font-extrabold">Next</button>
                             </div>
                             <div class="pt-3 flex items-center justify-around">
                                 <a href="#" class="text-[#03071299] underline">Terms and Conditions</a>
@@ -358,14 +365,46 @@
                     </div>
                 </div>
             </div>
+            <section id="pop-up" class="popup hidden">
+                <div class="text-center bg-white rounded-xl  py-14 px-24">
+                    <img class="mx-auto" src="images/icon/checkMark.svg" alt="">
+                    <h2 class="text-2xl text-[#27AE60] font-bold relway py-9">SUCCESS</h2>
+                    <p class="text-[#4A4A4A] text-xl font-medium pb-1">Thank you for Booking Our Bus Seats. </p>
+                    <p class="text-[#4A4A4A] text-xl font-medium pb-1">We are working hard to find the best service and deals for you.</p>
+                    <p class="text-[#4A4A4ACC] text-xl font-medium pb-5">Shortly you will find a confirmation in your email.</p>
+                    <button id="popup-btn" class="rounded-full bg-[#27AE60] text-white text-xl font-semibold py-4 px-24">Continue</button>
+                </div>
+            </section>
         </section>
+
+        <!-- popup section -->
+        
 
     </main>
 
     <!-- footer section -->
 
-    <footer class="mt-20 container mx-auto">
-
+    <footer class="bg-[#030712] text-white py-32 px-6">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center pb-12">
+                <div>
+                    <h2 class="relway font-extrabold text-3xl">S-Ticket</h2>
+                    <p class="pt-4">S-Ticket is a digital platform to make your <br> daily commuting better.</p>
+                </div>
+                <div>
+                    <h2 class="text-xl font-semibold relway pb-4">Download our app</h2>
+                    <a href="#"><img src="images/icon/playstore.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="flex justify-between items-center pt-8 border-t-2 border-dashed">
+                <p>@all rights reserved, S-Ticket services limited.2024</p>
+                <ul class="flex items-center gap-6">
+                    <li><a href="#">Terms & condition</a></li>
+                    <li><a href="#">Return & refund policy</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 
 
